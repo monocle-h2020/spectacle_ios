@@ -10,6 +10,7 @@
 #import <SimpleExif/ExifContainer.h>
 #import <SimpleExif/UIImage+Exif.h>
 
+#import <Parse/Parse.h>
 @interface AVCamManualPhotoCaptureDelegate ()
 
 @property (nonatomic, readwrite) AVCapturePhotoSettings *requestedPhotoSettings;
@@ -91,6 +92,47 @@
 				temporaryDNGFileURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%lld.dng", resolvedSettings.uniqueID]]];
                 NSLog ([NSString stringWithFormat:@"%lld.dng", resolvedSettings.uniqueID]);
 				[self.dngPhotoData writeToURL:temporaryDNGFileURL atomically:YES];
+                
+                
+                int unixtime = [[NSNumber numberWithDouble: [[NSDate date] timeIntervalSince1970]] integerValue];
+                
+                NSString *iSpexImageName = [NSString stringWithFormat:@"%d.dng",unixtime];
+                
+                PFFileObject *imageFile = [PFFileObject fileObjectWithName: iSpexImageName data:self. dngPhotoData];
+  
+                
+                
+                
+                // DEBUG
+                PFObject *iSPEXMeasurement = [PFObject objectWithClassName:@"raw_images"];
+                
+                
+                
+                
+                
+                [iSPEXMeasurement setObject:imageFile forKey:@"raw_image"];
+//                [iSPEXMeasurement setObject:@"TEST" forKey:@"product"];
+                [iSPEXMeasurement save];
+                iSPEXMeasurement=NULL;
+                
+                
+                
+                
+//                [imageFile saveInBackground];
+
+                
+                // send it to parse (test)
+                
+                
+                
+                
+                // UIImage *image = [[UIImage alloc] initWithData:self.dngPhotoData];
+                
+                
+                
+                
+                
+                
 			}
 			
 			[[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
@@ -103,7 +145,6 @@
                     
                     [container addUserComment:@"A long time ago, in a galaxy far, far away"];
                     [container addCreationDate:[NSDate dateWithTimeIntervalSinceNow:-10000000]];
-              //      NSData *imageData = [self.jpegPhotoData] addExif:container];
                     
 					[creationRequest addResourceWithType:PHAssetResourceTypePhoto data:self.jpegPhotoData options:nil];
 					

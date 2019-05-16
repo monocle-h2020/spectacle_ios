@@ -1,0 +1,26 @@
+PODS:
+  - Bolts/Tasks (1.9.0)
+  - Parse (1.17.2):
+    - Parse/Core (= 1.17.2)
+  - Parse/Core (1.17.2):
+    - Bolts/Tasks (~> 1.9)
+  - SimpleExif (0.0.1)
+
+DEPENDENCIES:
+  - Parse
+  - SimpleExif
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bolts
+    - Parse
+    - SimpleExif
+
+SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+  SimpleExif: 61ba6dce666641dc4b925d9d26a2694e68ebbf4b
+
+PODFILE CHECKSUM: bd6c0ce19dcf2fd3fae3cf8ea6bc0a1798058866
+
+COCOAPODS: 1.6.1

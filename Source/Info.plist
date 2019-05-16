@@ -21,19 +21,19 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>12</string>
+	<string>14</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>iSPEX wants to access the camera</string>
+	<string>Spectacle wants to access the camera</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>iSPEX needs your location</string>
+	<string>Spectacle needs your location</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>iSPEX wants to access the mic</string>
+	<string>Spectacle wants to access the mic</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>iSPEX wants to access the photo library</string>
+	<string>Spectacle wants to access the photo library</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>

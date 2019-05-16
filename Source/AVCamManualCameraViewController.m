@@ -14,8 +14,6 @@
 #import "AVCamManualPreviewView.h"
 #import "AVCamManualPhotoCaptureDelegate.h"
 
-#import "AstronomicalCalendar.h"
-#import "MoonPhase.h"
 
 
 #import <AudioToolbox/AudioToolbox.h>
@@ -133,71 +131,18 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"";
+        configuration.clientKey = @"";
+        configuration.server = @"https://prod3.ddq.nl/parse/";
+    }]];
     
     [self saveInstallationObject];
     
     // NORBERT INIT
     
     
-    
-    
-    [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error)  {
-        GeoLocation *AGeoLocation = [ [GeoLocation alloc] initWithName:@"Location" andLatitude:geoPoint.latitude andLongitude:geoPoint.longitude andTimeZone:[NSTimeZone systemTimeZone] ];
-        AstronomicalCalendar *astronomicalCalendar = [[AstronomicalCalendar alloc] initWithLocation:AGeoLocation] ;
-        MoonPhase *maanFase = [MoonPhase alloc];
-        NSDate *sunrise = [astronomicalCalendar sunrise];
-        NSDate *sunset = [astronomicalCalendar sunset];
-        NSDate *beginastronomicaltwilight =[astronomicalCalendar beginAstronomicalTwilight ];
-        NSDate *endastronomicaltwilight =[astronomicalCalendar endAstronomicalTwilight ];
-        NSDate *currentTime = [NSDate date];
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"HH:mm:ss"];
-        
-        NSString *strSunrise = [dateFormat stringFromDate:sunrise];
-        NSString *strSunset = [dateFormat stringFromDate:sunset];
-        NSString *strBAT = [dateFormat stringFromDate:beginastronomicaltwilight];
-        NSString *strEAT = [dateFormat stringFromDate:endastronomicaltwilight];
-      
-        NSTimeInterval twilightend = [endastronomicaltwilight timeIntervalSince1970];
-        NSTimeInterval twilightstart = [beginastronomicaltwilight timeIntervalSince1970];
-        NSTimeInterval current = [currentTime timeIntervalSince1970];
-        
-        if ((twilightstart-twilightend<0)) twilightstart=twilightstart+ (60 * 60 * 24);
-        
-        NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-        NSString *valueToSave;
-        NSString *intervalString = [NSString stringWithFormat:@"%f", twilightend];
-        valueToSave = intervalString;
-        [standardUserDefaults setObject:valueToSave forKey:@"ux_begindarkness"];
-        
-        intervalString = [NSString stringWithFormat:@"%f", twilightstart];
-        valueToSave = intervalString;
-        [standardUserDefaults setObject:valueToSave forKey:@"ux_enddarkness"];
-        [standardUserDefaults synchronize];
-        
-        NSString *strDarkness=@"";
-        if (current >twilightend && current < twilightstart) {
-            strDarkness=@"Astronomical darkness has begun";
-        } else
-        {   strDarkness=@"It is not dark yet";
-        }
-        
-        NSString *strMoon=@"";
-        if ([maanFase phase]>20) {
-            strMoon=@", the moon is over 20%";
-        }
-        
-      /*  lblNote.text=[strDarkness stringByAppendingString:strMoon];
-        
-        lblSunrise.text=[ NSString stringWithFormat:@"%@", strSunrise];
-        lblSunset.text=[ NSString stringWithFormat:@"%@", strSunset];
-        lblEndAstronomicalTwilight.text= [NSString stringWithFormat:@"%@", strEAT];
-        lblBeginAstronomicalTwilight.text= [NSString stringWithFormat:@"%@", strBAT];
-        lblMoonphase.text=[ NSString stringWithFormat:@"%0.f%%", [maanFase phase]];
-     */
-    }
-     ];
+   
 
     
     // MOTION MANAGER INIT
@@ -410,7 +355,6 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            NSLog(@"You have successfully connected your app to Back4App!");
         }else{
             NSLog(@"%@",error.debugDescription);
         }
@@ -1203,11 +1147,7 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error
 {
-	// Note that currentBackgroundRecordingID is used to end the background task associated with this recording.
-	// This allows a new recording to be started, associated with a new UIBackgroundTaskIdentifier, once the movie file output's isRecording property
-	// is back to NO — which happens sometime after this method returns.
-	// Note: Since we use a unique file path for each recording, a new recording will not overwrite a recording currently being saved.
-	UIBackgroundTaskIdentifier currentBackgroundRecordingID = self.backgroundRecordingID;
+	// 	UIBackgroundTaskIdentifier currentBackgroundRecordingID = self.backgroundRecordingID;
 	self.backgroundRecordingID = UIBackgroundTaskInvalid;
 
 	dispatch_block_t cleanup = ^{
@@ -1215,9 +1155,6 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 			[[NSFileManager defaultManager] removeItemAtURL:outputFileURL error:nil];
 		}
 		
-		if ( currentBackgroundRecordingID != UIBackgroundTaskInvalid ) {
-			[[UIApplication sharedApplication] endBackgroundTask:currentBackgroundRecordingID];
-		}
 	};
 
 	BOOL success = YES;
@@ -1508,13 +1445,7 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 
 - (void)sessionWasInterrupted:(NSNotification *)notification
 {
-	// In some scenarios we want to enable the user to restart the capture session.
-	// For example, if music playback is initiated via Control Center while using AVCamManual,
-	// then the user can let AVCamManual resume the session running, which will stop music playback.
-	// Note that stopping music playback in Control Center will not automatically resume the session.
-	// Also note that it is not always possible to resume, see -[resumeInterruptedSession:].
-	// In iOS 9 and later, the notification's userInfo dictionary contains information about why the session was interrupted
-	AVCaptureSessionInterruptionReason reason = [notification.userInfo[AVCaptureSessionInterruptionReasonKey] integerValue];
+		AVCaptureSessionInterruptionReason reason = [notification.userInfo[AVCaptureSessionInterruptionReasonKey] integerValue];
 	NSLog( @"Capture session was interrupted with reason %ld", (long)reason );
 	
 	if ( reason == AVCaptureSessionInterruptionReasonAudioDeviceInUseByAnotherClient ||
@@ -1633,6 +1564,16 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
     // DeviceID
     NSString *deviceUDID =     [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
+    
+    
+    // NS: Get RAW Image from nsdict
+    
+    
+    
+    
+    
+    
+    
     // Store data in a parse.com object.
     [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
         NSDate *currentTime = [NSDate date];
@@ -1640,8 +1581,23 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
         NSString *strUXcurrent = [NSString stringWithFormat:@"%f", current];
         NSString *version =[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"];
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
       // DEBUG
         PFObject *iSPEXMeasurement = [PFObject objectWithClassName:@"ispexdata"];
+        
+     
+        
+        
         [iSPEXMeasurement setObject:deviceUDID forKey:@"DeviceID"];
         [iSPEXMeasurement setObject:strDatetime forKey:@"datetime"];
         [iSPEXMeasurement setObject:geoPoint forKey:@"location"];

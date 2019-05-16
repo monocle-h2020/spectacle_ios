@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D6E9E27C79F468542863E8B /* libPods-SPECTACLE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FBCC676121286EE66527DF /* libPods-SPECTACLE.a */; };
+		7A49F59F1B38C02B003D7AF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A49F59E1B38C02B003D7AF5 /* main.m */; };
+		7A49F5A81B38C02B003D7AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A49F5A61B38C02B003D7AF5 /* Main.storyboard */; };
+		7A49F5B61B38C094003D7AF5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A49F5B41B38C094003D7AF5 /* Launch Screen.storyboard */; };
+		7A49F5BD1B38C0B6003D7AF5 /* AVCamManualAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A49F5B81B38C0B6003D7AF5 /* AVCamManualAppDelegate.m */; };
+		7A49F5BE1B38C0B6003D7AF5 /* AVCamManualCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A49F5BA1B38C0B6003D7AF5 /* AVCamManualCameraViewController.m */; };
+		7A49F5BF1B38C0B6003D7AF5 /* AVCamManualPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A49F5BC1B38C0B6003D7AF5 /* AVCamManualPreviewView.m */; };
+		7A49F5C31B38C0F3003D7AF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A49F5C21B38C0F3003D7AF5 /* Images.xcassets */; };
+		7ADABF8F1D5A95BA00F9E623 /* AVCamManualPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADABF8E1D5A95BA00F9E623 /* AVCamManualPhotoCaptureDelegate.m */; };
+		FE2EB4732109D4F1002C0F06 /* UIDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2EB4632109D4F1002C0F06 /* UIDropDownMenu.m */; };
+		FE2EB4742109D4F1002C0F06 /* Dark Sky Meter-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE2EB4672109D4F1002C0F06 /* Dark Sky Meter-Info.plist */; };
+		FE2EB4752109D4F1002C0F06 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2EB4682109D4F1002C0F06 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FE2EB4762109D4F1002C0F06 /* MathAdditions.c in Sources */ = {isa = PBXBuildFile; fileRef = FE2EB4692109D4F1002C0F06 /* MathAdditions.c */; };
+		FE2EB4772109D4F1002C0F06 /* GeoLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2EB46B2109D4F1002C0F06 /* GeoLocation.m */; };
+		FE2EB4782109D4F1002C0F06 /* AstronomicalCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2EB46C2109D4F1002C0F06 /* AstronomicalCalendar.m */; };
+		FE2EB4792109D4F1002C0F06 /* EarthViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2EB46D2109D4F1002C0F06 /* EarthViewer.m */; };
+		FE2EB47A2109D4F1002C0F06 /* AstronomicalCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2EB46E2109D4F1002C0F06 /* AstronomicalCalculator.m */; };
+		FE2EB47B2109D4F1002C0F06 /* MoonPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2EB46F2109D4F1002C0F06 /* MoonPhase.m */; };
+		FE2EB47C2109D4F1002C0F06 /* SunriseAndSunset.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2EB4702109D4F1002C0F06 /* SunriseAndSunset.m */; };
+		FE2EB47E2109FF69002C0F06 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2EB47D2109FF69002C0F06 /* CoreMotion.framework */; };
+		FECB6FD420EB6DB70018CD2D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FECB6FD320EB6DB70018CD2D /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A49F59A1B38C02B003D7AF5 /* iSPEX2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSPEX2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A49F59E1B38C02B003D7AF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A49F5A71B38C02B003D7AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A49F5B51B38C094003D7AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		7A49F5B71B38C0B6003D7AF5 /* AVCamManualAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamManualAppDelegate.h; sourceTree = "<group>"; };
+		7A49F5B81B38C0B6003D7AF5 /* AVCamManualAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamManualAppDelegate.m; sourceTree = "<group>"; };
+		7A49F5B91B38C0B6003D7AF5 /* AVCamManualCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamManualCameraViewController.h; sourceTree = "<group>"; };
+		7A49F5BA1B38C0B6003D7AF5 /* AVCamManualCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamManualCameraViewController.m; sourceTree = "<group>"; };
+		7A49F5BB1B38C0B6003D7AF5 /* AVCamManualPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamManualPreviewView.h; sourceTree = "<group>"; };
+		7A49F5BC1B38C0B6003D7AF5 /* AVCamManualPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamManualPreviewView.m; sourceTree = "<group>"; };
+		7A49F5C01B38C0DF003D7AF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A49F5C21B38C0F3003D7AF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7ADABF8D1D5A95BA00F9E623 /* AVCamManualPhotoCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamManualPhotoCaptureDelegate.h; sourceTree = "<group>"; };
+		7ADABF8E1D5A95BA00F9E623 /* AVCamManualPhotoCaptureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamManualPhotoCaptureDelegate.m; sourceTree = "<group>"; };
+		ABA2316E67CBCB67C9A4E232 /* Pods-SPECTACLE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPECTACLE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SPECTACLE/Pods-SPECTACLE.release.xcconfig"; sourceTree = "<group>"; };
+		D04B2724386B3E6EDA9536F1 /* Pods-SPECTACLE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPECTACLE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SPECTACLE/Pods-SPECTACLE.debug.xcconfig"; sourceTree = "<group>"; };
+		E9FBCC676121286EE66527DF /* libPods-SPECTACLE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SPECTACLE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCF92811826BF0FFEFD28115 /* libPods-iSPEX2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iSPEX2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE2EB45F2109D4F1002C0F06 /* AstronomicalCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalCalculator.h; sourceTree = "<group>"; };
+		FE2EB4602109D4F1002C0F06 /* EarthViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarthViewer.h; sourceTree = "<group>"; };
+		FE2EB4612109D4F1002C0F06 /* AstronomicalCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalCalendar.h; sourceTree = "<group>"; };
+		FE2EB4622109D4F1002C0F06 /* GeoLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoLocation.h; sourceTree = "<group>"; };
+		FE2EB4632109D4F1002C0F06 /* UIDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDropDownMenu.m; sourceTree = "<group>"; };
+		FE2EB4642109D4F1002C0F06 /* KosherCocoaConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KosherCocoaConstants.h; sourceTree = "<group>"; };
+		FE2EB4652109D4F1002C0F06 /* SunriseAndSunset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SunriseAndSunset.h; sourceTree = "<group>"; };
+		FE2EB4662109D4F1002C0F06 /* MoonPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoonPhase.h; sourceTree = "<group>"; };
+		FE2EB4672109D4F1002C0F06 /* Dark Sky Meter-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Dark Sky Meter-Info.plist"; sourceTree = "<group>"; };
+		FE2EB4682109D4F1002C0F06 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		FE2EB4692109D4F1002C0F06 /* MathAdditions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MathAdditions.c; sourceTree = "<group>"; };
+		FE2EB46A2109D4F1002C0F06 /* UIDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDropDownMenu.h; sourceTree = "<group>"; };
+		FE2EB46B2109D4F1002C0F06 /* GeoLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoLocation.m; sourceTree = "<group>"; };
+		FE2EB46C2109D4F1002C0F06 /* AstronomicalCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalCalendar.m; sourceTree = "<group>"; };
+		FE2EB46D2109D4F1002C0F06 /* EarthViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarthViewer.m; sourceTree = "<group>"; };
+		FE2EB46E2109D4F1002C0F06 /* AstronomicalCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalCalculator.m; sourceTree = "<group>"; };
+		FE2EB46F2109D4F1002C0F06 /* MoonPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoonPhase.m; sourceTree = "<group>"; };
+		FE2EB4702109D4F1002C0F06 /* SunriseAndSunset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SunriseAndSunset.m; sourceTree = "<group>"; };
+		FE2EB4712109D4F1002C0F06 /* MathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathAdditions.h; sourceTree = "<group>"; };
+		FE2EB4722109D4F1002C0F06 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		FE2EB47D2109FF69002C0F06 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		FECB6FD320EB6DB70018CD2D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5D15195C4810B7B485E0F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE2EB47E2109FF69002C0F06 /* CoreMotion.framework in Frameworks */,
+				4D6E9E27C79F468542863E8B /* libPods-SPECTACLE.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CBD7AEDF563B078A1116131 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D04B2724386B3E6EDA9536F1 /* Pods-SPECTACLE.debug.xcconfig */,
+				ABA2316E67CBCB67C9A4E232 /* Pods-SPECTACLE.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2B7E22EFA38817D1D941E2D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE2EB47D2109FF69002C0F06 /* CoreMotion.framework */,
+				FCF92811826BF0FFEFD28115 /* libPods-iSPEX2.a */,
+				E9FBCC676121286EE66527DF /* libPods-SPECTACLE.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A49F5911B38C02B003D7AF5 = {
+			isa = PBXGroup;
+			children = (
+				FECB6FD320EB6DB70018CD2D /* Default-568h@2x.png */,
+				7A49F59C1B38C02B003D7AF5 /* Source */,
+				7A49F59B1B38C02B003D7AF5 /* Products */,
+				1CBD7AEDF563B078A1116131 /* Pods */,
+				2B7E22EFA38817D1D941E2D2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7A49F59B1B38C02B003D7AF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A49F59A1B38C02B003D7AF5 /* iSPEX2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A49F59C1B38C02B003D7AF5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7A49F5B71B38C0B6003D7AF5 /* AVCamManualAppDelegate.h */,
+				7A49F5B81B38C0B6003D7AF5 /* AVCamManualAppDelegate.m */,
+				7A49F5BB1B38C0B6003D7AF5 /* AVCamManualPreviewView.h */,
+				7A49F5BC1B38C0B6003D7AF5 /* AVCamManualPreviewView.m */,
+				7A49F5B91B38C0B6003D7AF5 /* AVCamManualCameraViewController.h */,
+				7A49F5BA1B38C0B6003D7AF5 /* AVCamManualCameraViewController.m */,
+				7ADABF8D1D5A95BA00F9E623 /* AVCamManualPhotoCaptureDelegate.h */,
+				7ADABF8E1D5A95BA00F9E623 /* AVCamManualPhotoCaptureDelegate.m */,
+				FE2EB45E2109D4F1002C0F06 /* Ext */,
+				7A49F5A61B38C02B003D7AF5 /* Main.storyboard */,
+				7A49F5C21B38C0F3003D7AF5 /* Images.xcassets */,
+				7A49F5B41B38C094003D7AF5 /* Launch Screen.storyboard */,
+				7A49F5C01B38C0DF003D7AF5 /* Info.plist */,
+				7A49F59E1B38C02B003D7AF5 /* main.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FE2EB45E2109D4F1002C0F06 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				FE2EB45F2109D4F1002C0F06 /* AstronomicalCalculator.h */,
+				FE2EB4602109D4F1002C0F06 /* EarthViewer.h */,
+				FE2EB4612109D4F1002C0F06 /* AstronomicalCalendar.h */,
+				FE2EB4622109D4F1002C0F06 /* GeoLocation.h */,
+				FE2EB4632109D4F1002C0F06 /* UIDropDownMenu.m */,
+				FE2EB4642109D4F1002C0F06 /* KosherCocoaConstants.h */,
+				FE2EB4652109D4F1002C0F06 /* SunriseAndSunset.h */,
+				FE2EB4662109D4F1002C0F06 /* MoonPhase.h */,
+				FE2EB4672109D4F1002C0F06 /* Dark Sky Meter-Info.plist */,
+				FE2EB4682109D4F1002C0F06 /* JSONKit.m */,
+				FE2EB4692109D4F1002C0F06 /* MathAdditions.c */,
+				FE2EB46A2109D4F1002C0F06 /* UIDropDownMenu.h */,
+				FE2EB46B2109D4F1002C0F06 /* GeoLocation.m */,
+				FE2EB46C2109D4F1002C0F06 /* AstronomicalCalendar.m */,
+				FE2EB46D2109D4F1002C0F06 /* EarthViewer.m */,
+				FE2EB46E2109D4F1002C0F06 /* AstronomicalCalculator.m */,
+				FE2EB46F2109D4F1002C0F06 /* MoonPhase.m */,
+				FE2EB4702109D4F1002C0F06 /* SunriseAndSunset.m */,
+				FE2EB4712109D4F1002C0F06 /* MathAdditions.h */,
+				FE2EB4722109D4F1002C0F06 /* JSONKit.h */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A49F5991B38C02B003D7AF5 /* SPECTACLE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A49F5B11B38C02B003D7AF5 /* Build configuration list for PBXNativeTarget "SPECTACLE" */;
+			buildPhases = (
+				4CE8EC2ED52E3B0BB2375354 /* [CP] Check Pods Manifest.lock */,
+				7A49F5961B38C02B003D7AF5 /* Sources */,
+				7A49F5981B38C02B003D7AF5 /* Resources */,
+				E5D15195C4810B7B485E0F62 /* Frameworks */,
+				032C5652330053927C4CB5CA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPECTACLE;
+			productName = AVCamManual;
+			productReference = 7A49F59A1B38C02B003D7AF5 /* iSPEX2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A49F5921B38C02B003D7AF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					7A49F5991B38C02B003D7AF5 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = QPD2B5L538;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7A49F5951B38C02B003D7AF5 /* Build configuration list for PBXProject "SPECTACLE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A49F5911B38C02B003D7AF5;
+			productRefGroup = 7A49F59B1B38C02B003D7AF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A49F5991B38C02B003D7AF5 /* SPECTACLE */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A49F5981B38C02B003D7AF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A49F5C31B38C0F3003D7AF5 /* Images.xcassets in Resources */,
+				FECB6FD420EB6DB70018CD2D /* Default-568h@2x.png in Resources */,
+				7A49F5B61B38C094003D7AF5 /* Launch Screen.storyboard in Resources */,
+				FE2EB4742109D4F1002C0F06 /* Dark Sky Meter-Info.plist in Resources */,
+				7A49F5A81B38C02B003D7AF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		032C5652330053927C4CB5CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SPECTACLE/Pods-SPECTACLE-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SPECTACLE/Pods-SPECTACLE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CE8EC2ED52E3B0BB2375354 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SPECTACLE-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A49F5961B38C02B003D7AF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ADABF8F1D5A95BA00F9E623 /* AVCamManualPhotoCaptureDelegate.m in Sources */,
+				FE2EB4762109D4F1002C0F06 /* MathAdditions.c in Sources */,
+				7A49F59F1B38C02B003D7AF5 /* main.m in Sources */,
+				7A49F5BE1B38C0B6003D7AF5 /* AVCamManualCameraViewController.m in Sources */,
+				FE2EB4792109D4F1002C0F06 /* EarthViewer.m in Sources */,
+				FE2EB47A2109D4F1002C0F06 /* AstronomicalCalculator.m in Sources */,
+				FE2EB47B2109D4F1002C0F06 /* MoonPhase.m in Sources */,
+				7A49F5BF1B38C0B6003D7AF5 /* AVCamManualPreviewView.m in Sources */,
+				7A49F5BD1B38C0B6003D7AF5 /* AVCamManualAppDelegate.m in Sources */,
+				FE2EB47C2109D4F1002C0F06 /* SunriseAndSunset.m in Sources */,
+				FE2EB4772109D4F1002C0F06 /* GeoLocation.m in Sources */,
+				FE2EB4752109D4F1002C0F06 /* JSONKit.m in Sources */,
+				FE2EB4732109D4F1002C0F06 /* UIDropDownMenu.m in Sources */,
+				FE2EB4782109D4F1002C0F06 /* AstronomicalCalendar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A49F5A61B38C02B003D7AF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A49F5A71B38C02B003D7AF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A49F5B41B38C094003D7AF5 /* Launch Screen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A49F5B51B38C094003D7AF5 /* Base */,
+			);
+			name = "Launch Screen.storyboard";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A49F5AF1B38C02B003D7AF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPRESSION = lossless;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A49F5B01B38C02B003D7AF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPRESSION = "respect-asset-catalog";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A49F5B21B38C02B003D7AF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D04B2724386B3E6EDA9536F1 /* Pods-SPECTACLE.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QPD2B5L538;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.ddq.ispexcapture;
+				PRODUCT_NAME = iSPEX2;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7A49F5B31B38C02B003D7AF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABA2316E67CBCB67C9A4E232 /* Pods-SPECTACLE.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QPD2B5L538;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.ddq.ispexcapture;
+				PRODUCT_NAME = iSPEX2;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A49F5951B38C02B003D7AF5 /* Build configuration list for PBXProject "SPECTACLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A49F5AF1B38C02B003D7AF5 /* Debug */,
+				7A49F5B01B38C02B003D7AF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A49F5B11B38C02B003D7AF5 /* Build configuration list for PBXNativeTarget "SPECTACLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A49F5B21B38C02B003D7AF5 /* Debug */,
+				7A49F5B31B38C02B003D7AF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A49F5921B38C02B003D7AF5 /* Project object */;
+}
